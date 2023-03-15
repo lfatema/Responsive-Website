@@ -363,3 +363,13 @@ section {
 .contactForm .inputBox input[type="submit"]:hover {
     letter-spacing: 5px;
 }
+
+.copyrightText {
+     padding: 8px 40px;
+     border-top: 1px solid rgba(0,0,0,0.1);
+     text-align: center;
+}
+
+.copyrightText p {
+    color:#333;
+}
