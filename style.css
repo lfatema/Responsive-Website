@@ -70,7 +70,7 @@ nav {
 }
 
 nav.sticky {
-    background:#fff;
+    background:rgba(0,0,0,0.8);
     padding:10px 100px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
@@ -83,7 +83,7 @@ nav .logo {
 }
 
 nav.sticky .logo {
-    color:#111;
+    color:#fff;
 }
 
 nav .logo span {
@@ -107,7 +107,7 @@ nav .navigation li a {
 }
 
 nav.sticky .navigation li a{
-    color:#111;
+    color:#fff;
 }
 
 nav .navigation li a:hover{
@@ -373,3 +373,130 @@ section {
 .copyrightText p {
     color:#333;
 }
+
+@media (max-width: 991px) {
+    nav, nav.sticky{
+        padding:10px 20px;
+    }
+    nav .navigation {
+        display: none;
+    }
+
+    nav .navigation.active {
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top:68px;
+        left:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+        background: #fff;
+    }
+
+    nav .navigation li {
+        margin-left: 0;
+    }
+    
+    nav .navigation li a {
+        color:#111;
+        font-size: 1.6em;
+        line-height: 2em;
+    }
+
+    .menuToggle {
+        position: relative;
+        width:40px;
+        height:40px;
+        background: url(images/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .menuToggle.active {
+        background: url(images/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    nav.sticky .menuToggle {
+        filter: invert(1);
+    }
+
+    section {
+        padding:20px;
+    }
+
+    .banner .content h2 {
+        font-size: 3em;
+    }
+
+    .banner .content p {
+        font-size: 0.9em;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row .col50 {
+        position: relative;
+        width: 100%;
+    }
+    .row .col50 .titleText {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .row .col50 p {
+        text-align: justify;
+        font-size: 0.9em;
+    }
+
+    .row .col50 .imgBox {
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    .title .titleText {
+        text-align: center;
+    }
+
+    .title p {
+        text-align: center;
+        font-size: 0.9em;
+    }
+    .menu .content .box {
+        margin:15px;
+    }
+
+    .menu .content {
+        margin-top: 20px;
+    }
+    .menu .content .box .text {
+        padding: 8px 0 2px;
+    }
+
+    .testimonials .content {
+        margin-top: 20px;
+    }
+    .testimonials .content .box{
+        padding:20px;
+    }
+    .testimonials .content .box .text p {
+        font-size: 0.8em;
+    }
+    
+    .expert .content {
+        margin-top: 20px;
+    }
+    .contactForm {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .contactForm .inputBox input,
+    .contactForm .inputBox textarea {
+        font-size: 0.8em;
+    }
+
+} 
+
